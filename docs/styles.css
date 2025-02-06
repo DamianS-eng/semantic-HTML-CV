@@ -1,26 +1,43 @@
-:root {
+:root, .light {
   --clr-txt: black;
   --clr-bg: white;
 }
+.dark {
+  --clr-txt: white;
+  --clr-bg: black;
+}
 *, html, body {
-  margin: 0;
-  padding: 0;
   line-height: 1.5;
   font-size: clamp(1.15rem, 5vmin + .5rem, 4rem)
   color: var(--clr-txt);
   background: var(--clr-bg);
+  color-scheme: light dark;
 }
 h1 {
   font-size: 1.8rem;
 }
 body {
-  max-width: 50ch;
+  max-width: 80vmin;
   margin-inline: auto;
 }
-
+section {
+  margin-top: 1.5rem;
+}
+p {
+  margin: 0;
+}
+.subhead {
+  color: green;
+}
+.indic {
+  color: blue;
+}
 @media(prefers-color-scheme: dark) {
   :root { 
-  --clr-txt: black;
-  --clr-bg: white;
+  --clr-txt: white;
+  --clr-bg: black;
+  }
+  .indic {
+  color: lightblue;
   }
 }
