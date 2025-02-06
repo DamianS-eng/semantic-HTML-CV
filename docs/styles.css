@@ -1,0 +1,26 @@
+:root {
+  --clr-txt: black;
+  --clr-bg: white;
+}
+*, html, body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: clamp(1.15rem, 5vmin + .5rem, 4rem)
+  color: var(--clr-txt);
+  background: var(--clr-bg);
+}
+h1 {
+  font-size: 1.8rem;
+}
+body {
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root { 
+  --clr-txt: black;
+  --clr-bg: white;
+  }
+}
